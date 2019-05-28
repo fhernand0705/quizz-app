@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { QuestionsService } from '../service/questions.service';
+import { ResultsService } from '../service/results.service';
 
 @Component({
   selector: 'app-quiz',
@@ -7,12 +9,23 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class QuizComponent implements OnInit {
-  @Input() gotQuestions: any[];
 
-  constructor() { }
+  constructor(
+    private questionsService: QuestionsService,
+    private resultsService: ResultsService
+  ) { }
 
   ngOnInit() {
+    this.questionsService.displayQuestions();
+    this.submitQuiz();
   }
 
+  submitQuiz(): void {
+    var submitBtn = document.getElementById('submit');
+
+    submitBtn.addEventListener('click', () => {
+      this.resultsService.displayResult();
+    });
+  }
 
 }
