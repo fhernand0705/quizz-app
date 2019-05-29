@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuestionsService } from './service/questions.service';
 import { ResultsService } from './service/results.service';
+import { PaginationService } from './service/pagination.service';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ResultsService } from './service/results.service';
   ],
   providers: [
     QuestionsService,
-    ResultsService
+    ResultsService,
+    PaginationService
   ],
   bootstrap: [AppComponent]
 })
