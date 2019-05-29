@@ -17,18 +17,23 @@ export class ResultsService {
     var numCorrect = 0;
 
     gotQuestions.forEach((currentQuestion,questionNumber) => {
+      //access the answer selected
       var answerContainer = answerContainers[questionNumber];
       var selector = `input[name=question${questionNumber}]:checked`;
       var userAnswer = (<HTMLInputElement>answerContainer.querySelector(selector)).value;
 
+      //evaluate answer
       if(userAnswer === currentQuestion.correctAnswer) {
         numCorrect++;
+        //if correct, add green
         (<HTMLElement>answerContainer).style.color = "lightGreen";
       } else {
+        //else, add red
         (<HTMLElement>answerContainer).style.color = "red";
       }
   });
 
+    //print results to the browser
     results.innerHTML = `${numCorrect} of ${gotQuestions.length}`;
  }
 
