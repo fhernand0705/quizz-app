@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from '../service/questions.service';
 import { ResultsService } from '../service/results.service';
-import { PaginationService } from '../service/pagination.service'; 
+import { PaginationService } from '../service/pagination.service';
 
 @Component({
   selector: 'app-quiz',
@@ -19,11 +19,14 @@ export class QuizComponent implements OnInit {
 
   ngOnInit() {
     this.questionsService.displayQuestions();
+    this.paginationService.displaySlide(0);
+    this.paginationService.navNext();
+    this.paginationService.navPrev();
     this.submitQuiz();
   }
 
   submitQuiz(): void {
-    var submitBtn = document.getElementById('submit');
+    let submitBtn = document.getElementById('submit');
 
     submitBtn.addEventListener('click', () => {
       this.resultsService.displayResult();

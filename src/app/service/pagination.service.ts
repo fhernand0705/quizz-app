@@ -12,7 +12,7 @@ export class PaginationService {
     const prevBtn = document.getElementById('previous');
     const nextBtn = document.getElementById('next');
     const submitBtn = document.getElementById('submit');
-    const slides = document.querySelectorAll('slide');
+    const slides = document.querySelectorAll('.slide');
     var currentSlide: number = 0;
 
     slides[currentSlide].classList.remove('active-slide');
@@ -40,6 +40,32 @@ export class PaginationService {
 
     }
 
+  }
+
+  displayNextSlide() {
+    let currentSlide: number = 0;
+    this.displaySlide(currentSlide + 1);
+  }
+
+  displayPreviousSlide():void {
+    let currentSlide: number = 0;
+    this.displaySlide(currentSlide - 1);
+  }
+
+  navNext() {
+    const nextBtn2 = document.getElementById('next');
+
+    nextBtn2.addEventListener('click', () => {
+      this.displayNextSlide();
+    });
+  }
+
+  navPrev() {
+    const prevBtn = document.getElementById('previous');
+
+    prevBtn.addEventListener('click', () => {
+      this.displayPreviousSlide();
+    });
   }
 
 }

@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 .slide {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  display: grid;
+  justify-content: center;
+  top: 10em;
   z-index: 1;
   opacity: 0;
-  width: 100%;
+  width: 95%;
   transition: opacity 0.5s;
 }
 
