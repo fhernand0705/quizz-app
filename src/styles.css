@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 html {
   font-family: 'Quattrocento';
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to left, #272932, whitesmoke 50%, whitesmoke 50%, #272932 100% );
 }
 
 .title {
@@ -50,4 +55,12 @@ li {
 #next, #previous, #submit {
   font-family: 'Quattrocento';
   font-size: 1em;
+}
+
+#quizResults {
+  position: relative;
+  text-align: center;
+  top: 7em;
+  font-size: 3em;
+  right: .8em;
 }

@@ -26,16 +26,16 @@ export class QuestionsService {
             <li>
               <input type="radio" name="question${questionNumber}"
               value="${letter}">
-              <span class="letter-box">${letter}</span>
               <span class="answer-box">${currentQuestion.answers[letter]}</span>
             </li>
          </ul>`
       );
     }
+    //<span class="letter-box">${letter.toUpperCase()}</span>
       //store question and answers
       output.push(
           `<div class="slide">
-              <div class="question">${currentQuestion.question}</div>
+              <div class="question">${currentQuestion.question.toUpperCase()}</div>
               <div class="answers">${answers.join(" ")}</div>
            </div>`
         );
