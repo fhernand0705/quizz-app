@@ -8,27 +8,33 @@ export class PaginationService {
 
   constructor() { }
 
+  //set current slide to 0
+  currentSlide: number = 0;
+
   displaySlide(n:number):void {
     const prevBtn = document.getElementById('previous');
     const nextBtn = document.getElementById('next');
     const submitBtn = document.getElementById('submit');
     const slides = document.querySelectorAll('.slide');
-    var currentSlide: number = 0;
 
-    slides[currentSlide].classList.remove('active-slide');
+    //hide current slide
+    slides[this.currentSlide].classList.remove('active-slide');
+    //show new slide
     slides[n].classList.add('active-slide');
-    currentSlide = n;
+    //update current slide number
+    this.currentSlide = n;
 
-    if(currentSlide === 0) {
+    if(this.currentSlide === 0) {
 
       prevBtn.style.display = 'none';
 
     } else {
 
       prevBtn.style.display = 'inline-block';
+      prevBtn.style.alignItems = 'center';
     }
 
-    if(currentSlide === slides.length - 1) {
+    if(this.currentSlide === slides.length - 1) {
 
       nextBtn.style.display = 'none';
       submitBtn.style.display = 'inline-block';
@@ -42,29 +48,27 @@ export class PaginationService {
 
   }
 
+  //add functionationality to the next button
   displayNextSlide() {
-    let currentSlide: number = 0;
-    this.displaySlide(currentSlide + 1);
+    this.displaySlide(this.currentSlide + 1);
   }
 
+  //add functionationality to the previous button
   displayPreviousSlide():void {
-    let currentSlide: number = 0;
-    this.displaySlide(currentSlide - 1);
+    this.displaySlide(this.currentSlide - 1);
   }
 
-  navNext() {
-    const nextBtn2 = document.getElementById('next');
-
-    nextBtn2.addEventListener('click', () => {
-      this.displayNextSlide();
-    });
-  }
-
-  navPrev() {
+  //add click event to call function slides
+  navBtns() {
+    const nextBtn = document.getElementById('next');
     const prevBtn = document.getElementById('previous');
 
+    nextBtn.addEventListener('click', () => {
+      this.displayNextSlide();
+    });
+
     prevBtn.addEventListener('click', () => {
-      this.displayPreviousSlide();
+        this.displayPreviousSlide();
     });
   }
 

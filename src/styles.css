@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  font-family: 'Quattrocento';
+}
+
+.title {
+  display: grid;
+  justify-content: center;
+  font-family: 'Quattrocento';
+}
+
+li {
+  list-style: none;
+}
+
 .slide {
   position: absolute;
   display: grid;
@@ -10,6 +24,10 @@
   transition: opacity 0.5s;
 }
 
+.question {
+  text-align: center;
+}
+
 .active-slide {
   opacity: 1;
   z-index: 2;
@@ -19,4 +37,17 @@
   position: relative;
   height: 200px;
   margin-top: 40px;
+}
+
+.btnContainer {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  top: 17.5em;
+  right: 1.8em;
+}
+
+#next, #previous, #submit {
+  font-family: 'Quattrocento';
+  font-size: 1em;
 }

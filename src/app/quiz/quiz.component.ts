@@ -20,9 +20,13 @@ export class QuizComponent implements OnInit {
   ngOnInit() {
     this.questionsService.displayQuestions();
     this.paginationService.displaySlide(0);
-    this.paginationService.navNext();
-    this.paginationService.navPrev();
+    this.paginationService.navBtns();
     this.submitQuiz();
+    //this.message();
+  }
+
+  message() {
+    alert("WELCOME TO THE GAME OF THRONES QUIZ! \nPLEASE NOTE: ALL QUESTIONS REQUIRE AN ANSWER.");
   }
 
   submitQuiz(): void {
