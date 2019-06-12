@@ -8,7 +8,7 @@ body {
   background: linear-gradient(to left, #272932, whitesmoke 50%, whitesmoke 50%, #272932 100% );
 }
 
-.title {
+.title-container {
   display: grid;
   justify-content: center;
   font-family: 'Quattrocento';
