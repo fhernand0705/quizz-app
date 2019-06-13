@@ -4,14 +4,13 @@ const path = require('path');
 
 // Run the app by serving the static files
 // in the dist directory
-//app.use(express.static(__dirname + '/dist/quizapp'));
-app.use(express.static(`${__dirname}/front-end/dist/`));
+app.use(express.static(__dirname + '/dist/quiz-app'));
 
 // ...
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(`./front-end/dist/quizapp/index.html`));
+  res.sendFile(path.join(__dirname + '/dist/quiz-app/index.html'));
 });
 
 // Start the app by listening on the default
