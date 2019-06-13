@@ -14,6 +14,12 @@ body {
   font-family: 'Quattrocento';
 }
 
+.quiz {
+  position: relative;
+  text-align: center;
+  top: -1em;
+}
+
 li {
   list-style: none;
 }
