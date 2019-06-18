@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to left, #272932, whitesmoke 50%, whitesmoke 50%, #272932 100% );
+  background: linear-gradient(to left, #272932 22%, whitesmoke 50%, whitesmoke 50%, #272932 78% );
 }
 
 .title-container {
@@ -54,13 +54,28 @@ li {
   position: relative;
   text-align: center;
   margin: auto;
-  top: 17.5em;
+  top: 13.5em;
   right: 1.8em;
 }
 
 #next, #previous, #submit {
   font-family: 'Quattrocento';
   font-size: 1em;
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #272932;
+  color: whitesmoke;
+}
+
+#next {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#previous {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 #quizResults {

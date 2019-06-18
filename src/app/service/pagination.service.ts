@@ -60,14 +60,14 @@ export class PaginationService {
 
   //add click event to call function slides
   navBtns() {
-    const nextBtn = document.getElementById('next');
-    const prevBtn = document.getElementById('previous');
+    const nextBtn2 = document.getElementById('next');
+    const prevBtn2 = document.getElementById('previous');
 
-    nextBtn.addEventListener('click', () => {
+    nextBtn2.addEventListener('click', () => {
       this.displayNextSlide();
     });
 
-    prevBtn.addEventListener('click', () => {
+    prevBtn2.addEventListener('click', () => {
         this.displayPreviousSlide();
     });
   }
