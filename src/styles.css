@@ -15,7 +15,14 @@ body {
 }
 
 h1 {
-  text-shadow: 2px 2px lightgray; 
+  text-shadow: 2px 2px lightgray;
+}
+
+hr {
+  position: relative;
+  top: -3em;
+  width: 10%;
+  border-color: whitesmoke;
 }
 
 .quiz {
