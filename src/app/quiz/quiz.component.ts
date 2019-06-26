@@ -22,11 +22,11 @@ export class QuizComponent implements OnInit {
     this.paginationService.displaySlide(0);
     this.paginationService.navBtns();
     this.submitQuiz();
-    //this.message();
+    this.message();
   }
 
   message() {
-    alert("WELCOME TO THE GAME OF THRONES QUIZ! \nPLEASE NOTE: ALL QUESTIONS REQUIRE AN ANSWER.");
+    alert("WELCOME TO THE GAME OF THRONES QUIZ! \nPLEASE NOTE: ALL QUESTIONS REQUIRE AN ANSWER FOR SUBMISSION.");
   }
 
   submitQuiz(): void {
