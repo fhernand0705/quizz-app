@@ -26,7 +26,8 @@ export class ResultsService {
       if(userAnswer === currentQuestion.correctAnswer) {
         numCorrect++;
         //if correct, add green
-        (<HTMLElement>answerContainer).style.color = "lightGreen";
+        (<HTMLElement>answerContainer).style.color = "lightgreen";
+        (<HTMLElement>answerContainer).style.textShadow = "1px 1px black";
       } else {
         //else, add red
         (<HTMLElement>answerContainer).style.color = "red";
