@@ -66,7 +66,11 @@ li {
   text-align: center;
   margin: auto;
   top: 13.5em;
-  right: 1.8em;
+  right: 0;
+}
+
+span {
+  margin-right: 1em;
 }
 
 #next, #previous, #submit {
@@ -75,7 +79,7 @@ li {
   position: relative;
   border-radius: 5px;
   padding: 10px;
-  background-color: #272932;
+  background: linear-gradient(to bottom, black, 75%, whitesmoke);
   color: whitesmoke;
 }
 
