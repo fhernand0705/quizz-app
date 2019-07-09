@@ -12,10 +12,10 @@ export class PaginationService {
   currentSlide: number = 0;
 
   displaySlide(n:number):void {
-    const prevBtn = document.getElementById('previous');
-    const nextBtn = document.getElementById('next');
-    const submitBtn = document.getElementById('submit');
-    const slides = document.querySelectorAll('.slide');
+    const prevBtn: any = document.getElementById('previous');
+    const nextBtn: any = document.getElementById('next');
+    const submitBtn: any = document.getElementById('submit');
+    const slides: any = document.querySelectorAll('.slide');
 
     //hide current slide
     slides[this.currentSlide].classList.remove('active-slide');
